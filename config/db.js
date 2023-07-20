@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 
 function getDatabase(){
-    let DB_URI = ""; // add db url
+    let DB_URI = process.env.DB_URI;
+    
     mongoose.connect(DB_URI);
     let db = mongoose.connection;
 
